@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="site.css" />
+  <title>Image Mapper</title>
+</head>
+
+<body>
+  <div class="container" align="center">
+    <div class="header">
+      <div class="pt-20"><label>Image Name: </label><span id="name"></span></div> <br />
+      <div class="pt-20"><label>Dimension: </label><span id="dimension"></span></div> <br />
+      <div class="pt-20"><label>MIME Type: </label><span id="type"></span></div> <br />
+    </div>
+    <div class="mt-70">
+      <input class="custom-file-input" type="file" id="imageLoader" accept="image/png, image/gif, image/jpeg, image/svg"
+        name="imageLoader" />
+    </div>
+
+    <div clss="w-100">
+      <div id="canvas-container" class="wl-50">
+        <canvas class="mw-100" id="imageCanvas"></canvas>
+        <canvas id="tip" width=100 height=25></canvas>
+      </div>
+      <div class="wr-50" id="desc-table">
+      </div>
+    </div>
+    <dialog id="modal-dialog">
+      <form method="dialog">
+        <label>Decription</label> <br />
+        <input type="text" id="description" name="description" /> <br />
+        <button id="confirmBtn">Save</button>
+        <button>Cancel</button>
+      </form>
+    </dialog>
+  </div>
+  <script type="text/javascript" src="image-mapper.js"></script>
+</body>
+
+</html>
